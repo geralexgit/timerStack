@@ -1,0 +1,9 @@
+.formInputs {
+    display: flex;
+}
+.formInputs input {
+    margin-right: 15px;
+}
+.timerForm {
+    max-width: 640px;
+}

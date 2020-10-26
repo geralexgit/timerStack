@@ -30,8 +30,12 @@ export const timers: StoreonModule<TimersStore> = store => {
             timers: newTimers
         }
     });
-    store.on(deleteTimer, (state, payload) => {
-
+    store.on(deleteTimer, (state, payload: number) => {
+        const newTimers = state.timers.filter(timer => timer.id !== payload);
+        return {
+            ...state,
+            timers: newTimers
+        }
     });
     /*
     store.on(getPostsSuccess, (state, payload) => {

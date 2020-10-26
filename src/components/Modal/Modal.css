@@ -1,0 +1,34 @@
+.modalWrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.1);
+    padding-top: 200px;
+}
+
+.modalControls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modalContent {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 600px;
+    background: #fff;
+    padding: 20px;
+    animation-name: modalAnimation;
+    animation-duration: .2s;
+}
+
+.closeModalBtn {
+    margin: 0;
+}
+
+/* The animation code */
+@keyframes modalAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

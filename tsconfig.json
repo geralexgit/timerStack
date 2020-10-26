@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsxFactory": "h",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "src/*.ts",
+    "src/*.tsx"
+  ]
+}

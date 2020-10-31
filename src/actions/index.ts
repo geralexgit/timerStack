@@ -8,3 +8,6 @@ export const createPostSuccess = 'posts/createPostSuccess';
 
 export const addTimer = 'timers/add';
 export const deleteTimer = 'timers/delete';
+export const setActiveTimer = 'timers/setActive';
+export const disableActiveTimer = 'timers/disableActive';
+export const resetActiveTimer = 'timers/resetActive';

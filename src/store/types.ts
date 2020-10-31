@@ -32,6 +32,7 @@ export interface PostsEvents {
 
 export interface Timer {
     id?: number;
+    isActive?: boolean;
     minutes: number;
     seconds: number;
 }

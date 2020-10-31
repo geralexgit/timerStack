@@ -13,10 +13,11 @@ const TimersList = () => {
     return (
         <div>
             {timers.map((timer: Timer) => {
-                const {minutes, seconds, id} = timer;
+                const {minutes, seconds, id, isActive} = timer;
                 return (
                     <div className={style.timersListItem}>
                         <div>{minutes}</div><div>{seconds}</div>
+                        <div>{isActive}</div>
                         <button onClick={() => removeTimer(id)}>x</button>
                     </div>
                 )

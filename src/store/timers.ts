@@ -2,13 +2,13 @@ import {StoreonModule} from 'storeon'
 
 import {
     addTimer,
-    deleteTimer, disableActiveTimer, setActiveTimer,
+    deleteTimer, disableActiveTimer, resetActiveTimer, setActiveTimer,
 } from '../actions'
 
 import {Timer, TimersStore} from './types'
 
 const initialState: TimersStore = {
-    timers: [{id: 123, minutes: 0, seconds: 5}, {id: 153, minutes: 0, seconds: 4}]
+    timers: [{id: 123, minutes: 0, seconds: 5}, {id: 153, minutes: 0, seconds: 14}]
 };
 
 export const timers: StoreonModule<TimersStore> = store => {
@@ -62,4 +62,14 @@ export const timers: StoreonModule<TimersStore> = store => {
             timers: newTimers
         }
     });
+    store.on(resetActiveTimer, (state => {
+        const newTimers = state.timers.map(timer => {
+            timer.isActive = false;
+            return timer;
+        })
+        return {
+            ...state,
+            timers: newTimers
+        }
+    }))
 };
